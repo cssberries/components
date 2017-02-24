@@ -1,0 +1,21 @@
+.alert {
+	.flex;
+  & + .alert{
+    .margin-t--sm;
+  }
+  .alert--info;
+}
+.alert__message{
+	.flex--1;
+	.ellipsis;
+	margin: 4px @gap--sm 3px @gap--sm;
+}
+
+.alert__controls{
+	.minor;
+	max-height: 32px;
+}
+.alert--success {.alert-variant(@color--success; @border-color; @text-color--strong);}
+.alert--info    {.alert-variant(@color--info; @border-color; @text-color--strong);}
+.alert--error  {.alert-variant(@color--error; @border-color; @text-color--strong);}
+.alert--warning {.alert-variant(@color--warning; @border-color; @text-color--strong);}

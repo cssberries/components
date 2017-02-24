@@ -1,0 +1,13 @@
+.btn--silent {
+    background-color: transparent;
+    border-color: transparent;
+    &:hover,&.hover {
+	    background-color: @bg--content;
+	    border-color: @border-color;
+    }
+	&:active,&.active{
+		border-color: @border-color;
+		color: @text-color--strongest;
+		.bg--hover;
+	}
+}

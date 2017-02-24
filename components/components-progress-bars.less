@@ -1,0 +1,97 @@
+@keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Bar itself
+// -------------------------
+// Outer container
+.progress {
+  overflow: hidden;
+  height: 8px;
+  // margin-bottom: @line-height-computed;
+  background-color: @progress-bg;
+}
+
+// Bar of progress
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  // font-size: @font-size-small;
+  line-height: @line-height-computed;
+  color: @progress-bar-color;
+  text-align: center;
+  background-color: @progress-bar-bg;
+  .transition(width .6s ease);
+}
+
+// Striped bars
+.progress-striped .progress-bar {
+  #gradient > .striped();
+  background-size: 40px 40px;
+}
+
+// Call animation for the active one
+.progress.active .progress-bar {
+  animation: progress-bar-stripes .480s linear infinite;
+}
+
+// Variations
+// -------------------------
+
+.progress-bar-success {
+  .progress-bar-variant(@progress-bar-success-bg);
+}
+
+.progress-bar-info {
+  .progress-bar-variant(@progress-bar-info-bg);
+}
+
+.progress-bar-warning {
+  .progress-bar-variant(@progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+  .progress-bar-variant(@progress-bar-danger-bg);
+}
+#gradient {
+  .striped(@color: @text-color--medium; @angle: 45deg; @contrast: .1) {
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(0,0,0, @contrast)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(0,0,0, @contrast)), color-stop(.75, rgba(0,0,0, @contrast)), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(@angle, rgba(0,0,0, @contrast) 25%, transparent 25%, transparent 50%, rgba(0,0,0, @contrast) 50%, rgba(0,0,0, @contrast) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(@angle, rgba(0,0,0, @contrast) 25%, transparent 25%, transparent 50%, rgba(0,0,0, @contrast) 50%, rgba(0,0,0, @contrast) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(@angle, rgba(0,0,0, @contrast) 25%, transparent 25%, transparent 50%, rgba(0,0,0, @contrast) 50%, rgba(0,0,0, @contrast) 75%, transparent 75%, transparent);
+  }
+}
+.progress-bar--100{
+  .width--100;
+}
+.progress-bar--75{
+  width: 70%;
+}
+.progress--xxs{
+  height: 2px;
+  &.progress-striped .progress-bar {
+        #gradient > .striped(#000000, 45deg, .2);
+	}
+}
+.progress--xs{
+  height: 4px;
+  &.progress-striped .progress-bar {
+        #gradient > .striped(#000000, 45deg, .15);
+	}
+}
+.progress--sm {
+    height: 8px;
+
+}
+.progress--md {
+    height: 12px;
+
+}
+
+// Striped bars
+.progress-striped .progress-bar {
+  #gradient > .striped(#000000, 45deg, .1);
+  background-size: 40px 40px;
+}

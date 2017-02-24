@@ -1,0 +1,75 @@
+.pseudo-margins(@top, @bottom) {
+    &:before {
+        margin-top: @top * -1px;
+    }
+    &:after {
+        margin-bottom: @bottom * -1px;
+    }
+}
+.text-block {
+    .text-block__text{
+        margin-right         : -0.05em;
+        margin-left          : -0.05em;
+    }
+    line-height              : 1.5em;
+    border                   : 1px solid transparent;
+    &.border{
+        border-color         : @border-color;
+    }
+    &:before, &:after {
+        display              : block;
+        content              :'';
+    }
+    &:before {margin-top: -0.5em;}
+    &:after {margin-bottom: -0.5em;}
+
+    &.text--xxs {.pseudo-margins(6, 5);}
+    &.text--xs {.pseudo-margins(7, 6);}
+    &.text--sm {.pseudo-margins(7, 7);}
+    &.text--md {.pseudo-margins(8, 8);}
+    &.text--lg {.pseudo-margins(11, 9);}
+    &.text--xl {.pseudo-margins(12, 11);}
+    &.text--xxl {.pseudo-margins(16, 14);}
+    &.text--3xl {.pseudo-margins(22, 19);}
+    &.text--4xl {.pseudo-margins(30, 25);}
+    &.text--5xl {.pseudo-margins(40, 33);}
+}
+.text-block {
+    &.font--infog-light,&.font--infog,&.font--infog-bold{
+        .text-block__text {
+            margin-right     : -0.05em;
+            margin-left      : -0.05em;
+        }
+        line-height          : 1.5em;
+        border               : 1px solid transparent;
+        &.border {
+            border-color     : @border-color;
+        }
+        &:before,
+        &:after {
+            display          : block;
+            content          : '';
+        }
+        &:before {margin-top: -0.3em;}
+        &:after {margin-bottom: -0.5em;}
+        &.text--xxs {.pseudo-margins(3, 5);}
+        &.text--xs {.pseudo-margins(3, 6);}
+        &.text--sm {.pseudo-margins(4, 7);}
+        &.text--md {.pseudo-margins(5, 8);}
+        &.text--lg {.pseudo-margins(5, 9);}
+        &.text--xl {.pseudo-margins(6, 11);}
+        &.text--xxl {.pseudo-margins(8, 13);}
+        &.text--3xl {.pseudo-margins(10, 17);}
+        &.text--4xl {.pseudo-margins(14, 22);}
+        &.text--5xl {.pseudo-margins(19, 30);}
+    }
+}
+a.text-block {
+  display: inline-block;
+  &.block {
+    .block;
+  }
+}
+.anchor--not-link {
+  color: initial;
+}

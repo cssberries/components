@@ -1,0 +1,25 @@
+{
+  "name": "components",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cssberries/components",
+  "authors": [
+    "Yevgeniy Belov"
+  ],
+  "description": "Library of components",
+  "main": "components.less",
+  "keywords": [
+    "components",
+    "css",
+    "bem",
+    "oocss",
+    "itcss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

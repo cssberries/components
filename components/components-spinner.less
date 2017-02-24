@@ -1,0 +1,80 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes stroke {
+    0% {
+        stroke-width: 4px;
+    }
+    50% {
+        stroke-width: 1px;
+    }
+    100% {
+        stroke-width: 4px;
+    }
+}
+// ***********************************************
+@keyframes rotation--clock {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes mask {
+    0% {
+        transform: translate(-16px,0);
+    }
+    100% {
+        transform: translate(34px,0);
+    }
+}
+
+#loader__glow{
+	display: none;
+}
+#slow-rotator{
+    .transform-origin(16px,16px);
+    .animation(rotation--clock,4s,0,linear);
+    animation-iteration-count: infinite;
+}
+#fast-rotator{
+    .transform-origin(16px,16px);
+    .animation(rotation--clock,1s,0,cubic-bezier(.4,0,.2,1));
+    animation-iteration-count: infinite;
+}
+#loader__circle {
+    fill             : none;
+    stroke           : @loader__circle-color;
+    stroke-width     : 2px;
+}
+.loader__spinner {
+    fill             : none;
+    stroke           : @color--accent;
+    stroke-width     : 2px;
+	.animation(stroke,1s,0,cubic-bezier(.4,0,.2,1));
+	animation-iteration-count: infinite;
+}
+#loader__disc {
+    fill             : #ff8d6d;
+	.animation(stroke,1s,0,cubic-bezier(.4,0,.2,1));
+	animation-iteration-count: infinite;
+}
+
+#mask{
+    .animation(mask,1.5s,0,linear);
+    animation-iteration-count: infinite;
+}

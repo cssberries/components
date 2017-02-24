@@ -1,0 +1,38 @@
+.btn.btn--outline {// Bump specificity to trump filled buttons
+    border: none;
+    background: none;
+	color: @text-color--medium;
+	outline: 2px solid @border-color;
+    outline-offset: -2px;
+	.transition--xs;
+    .btn--inverted&{
+        .text-color-inverted--strong;
+    }
+	&:hover,&.hover{
+		color: @text-color--strong;
+        outline-offset: -3px;
+		outline-width: 3px;
+        .btn--inverted&{
+        .text-color-inverted--strongest;
+    }
+	}
+	&:active,&.active{
+		color: @text-color--strongest;
+        .btn--inverted&{
+        .text-color-inverted--strongest;
+    }
+	}
+	&:active,&.active{background: fadeout(@border-color,5%)}
+    &.btn--xxs {outline-width: 1px;outline-offset: -1px;&:hover,&.hover {outline-width: 2px;outline-offset: -2px}};
+    &.btn--xs { outline-width: 1px;outline-offset: -1px;&:hover,&.hover {outline-width: 2px;outline-offset: -2px}};
+    &.btn--sm { outline-width: 1px;outline-offset: -1px;&:hover,&.hover {outline-width: 2px;outline-offset: -2px}};
+    &.btn--md { outline-width: 2px;outline-offset: -2px;&:hover,&.hover {outline-width: 4px;outline-offset: -4px}};
+    &.btn--lg { outline-width: 3px;outline-offset: -3px;&:hover,&.hover {outline-width: 5px;outline-offset: -5px}};
+    &.btn--xl { outline-width: 4px;outline-offset: -4px;&:hover,&.hover {outline-width: 6px;outline-offset: -6px}};
+    &.btn--xxl {outline-width: 6px;outline-offset: -6px;&:hover,&.hover {outline-width: 8px;outline-offset: -8px}};
+
+	&.btn--success{outline-color: @color--success;&:active,&.active{background: fadeout(@color--success,80%)}}
+	&.btn--primary{outline-color: @color--primary;&:active,&.active{background: fadeout(@color--primary,80%)}}
+	&.btn--error  {outline-color: @color--error;&:active,&.active{background: fadeout(@color--error,80%)}}
+	&.btn--warning{outline-color: @color--warning;&:active,&.active{background: fadeout(@color--warning,80%)}}
+}

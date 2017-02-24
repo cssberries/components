@@ -1,0 +1,124 @@
+.buttons-group {
+    &:not(.buttons-group--silent){
+        .btn+.buttons-group {
+            margin-left: -1px;
+        }
+        .inline-flex;
+        &.buttons-group--flex{
+            .flex;
+        }
+        .btn {
+            box-shadow: none;
+    		& + .btn{
+    		border-left: none;
+    		}
+        }
+    }
+    &.buttons-group--rounded {
+        .btn {
+            &:first-child {
+                border-top-left-radius: @border-radius-base!important;
+                border-bottom-left-radius: @border-radius-base;
+            }
+            &:last-child {
+                border-top-right-radius: @border-radius-base;
+                border-bottom-right-radius: @border-radius-base;
+            }
+        }
+    }
+}
+.buttons-group--separated {
+    .btn + .btn:not(:first-child) {
+        .border--l;
+        .border--weak;
+        &:hover {
+            border-color: transparent;
+        }
+    }
+    .btn:hover {
+        & +.btn {
+            border-color: @border-color--hover;
+        }
+    }
+}
+.buttons-group--integrated-toggle {
+    .margin--xxs;
+    .align-self--center;
+    .btn {
+        .btn--integrated;
+    }
+}
+.buttons-group--accent {
+    .btn {
+        &.active,
+        &.open {
+            .bg--brand;
+            color: @color--opposite;
+            &.btn--integrated {
+                box-shadow: none;
+            }
+        }
+    }
+}
+.buttons-group--primary {
+    .btn {
+        &.active,
+        &.open {
+            .bg--primary;
+            color: @color--opposite;
+            &.btn--integrated {
+                box-shadow: none;
+            }
+        }
+    }
+}
+.buttons-group--hp-exp {
+    border-top-right-radius: @radius--md;
+    border-bottom-left-radius: @radius--md;
+    .btn--first {
+        border-bottom-left-radius: @radius--md;
+    }
+    .btn--last {
+        border-top-right-radius: @radius--md;
+    }
+}
+.buttons-group--xxs {
+    .btn {
+        .btn--xxs;
+    }
+}
+.buttons-group--xs {
+    .btn {
+        .btn--xs;
+    }
+}
+.buttons-group--sm {
+    .btn {
+        .btn--sm;
+    }
+}
+.buttons-group--md {
+    .btn {
+        .btn--md;
+    }
+}
+.buttons-group--lg {
+    .btn {
+        .btn--lg;
+    }
+}
+.buttons-group--xl {
+    .btn {
+        .btn--xl;
+    }
+}
+.buttons-group--xxl {
+    .btn {
+        .btn--xxl;
+    }
+}
+.buttons-group--silent {
+    .btn {
+        .btn--silent;
+    }
+}

@@ -1,0 +1,22 @@
+.breadcrumbs {
+    .align-items--center;
+}
+.breadcrumbs__item {
+    &.active {
+        color: @text-color--strongest;
+        .font--bold;
+        &:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+    .breadcrumbs--lg & {
+        .text--md;
+    }
+    .breadcrumbs--xl & {
+        .text--lg;
+    }
+    .breadcrumbs__item + & {
+        .margin-l--xxs;
+    }
+}
