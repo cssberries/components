@@ -1,25 +1,36 @@
 {
-  "name": "components",
-  "version": "0.0.1",
-  "homepage": "https://github.com/cssberries/components",
-  "authors": [
-    "Yevgeniy Belov"
-  ],
-  "description": "Library of components",
-  "main": "components.less",
-  "keywords": [
-    "components",
-    "css",
-    "bem",
-    "oocss",
-    "itcss"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "name": "components",
+    "version": "0.0.2",
+    "homepage": "https://github.com/cssberries/components",
+    "authors": [
+        "Yevgeniy Belov"
+    ],
+    "description": "Library of components",
+    "main": "components.less",
+    "keywords": [
+        "components",
+        "css",
+        "bem",
+        "oocss",
+        "itcss"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "colors": "cssberries-colors#^0.0.2",
+        "cssberries-helpers": "latest",
+        "cssberries-dimensions": "latest",
+        "cssberries-materials-shadows": "latest",
+        "cssberries-materials-borders": "latest",
+        "cssberries-materials-backgrounds": "latest",
+        "cssberries-spacers": "latest",
+        "cssberries-spacers": "latest",
+        "cssberries-objects-flexbox": "latest"
+    }
 }
