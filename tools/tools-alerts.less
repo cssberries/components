@@ -1,0 +1,8 @@
+.alert-variant(@background; @border; @text-color) {
+  background-color: lighten(@background, 25%);
+  border-color: @border;
+  color: darken(@background, 20%);
+  hr {
+    border-top-color: darken(@border, 5%);
+  }
+}

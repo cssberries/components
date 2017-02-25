@@ -1,0 +1,61 @@
+.generate-button(@bg) {
+    background-color: @bg;
+    color: @color--opposite;
+    border: none;
+    &:hover,
+	&.hover,
+    &:focus,
+	&.focus {
+		color: @text-color-inverted--strongest;
+        background-color: darken(@bg, 5%);
+    }
+    &:active,&.active {
+		color: @text-color-inverted--strongest;
+        border-color: darken(#ccc, 10%);
+        background-color: darken(@bg, 15%);
+    }
+    &.btn--integrated {
+        background-color: @bg;
+        &:hover,
+    	&.hover,
+        &:focus,
+    	&.focus {
+            background-color: darken(@bg, 10%);
+        }
+        &:active,&.active {
+            background-color: darken(@bg, 15%);
+        }
+    }
+    &.btn--wired {
+        color: @bg;
+        .border;
+        border-color: @bg;
+        &:hover,
+    	&.hover,
+        &:focus,
+    	&.focus {
+            color: @text-color-inverted--strongest;
+            border-color: darken(@bg, 10%);
+            background-color: fade(@bg, 75%);
+        }
+        &:active,&.active {
+            color: @text-color-inverted--strongest;
+            border-color: darken(@bg, 10%);
+            background-color: @bg;
+        }
+    }
+    &.btn--silent {
+        color: @bg;
+        &:hover,
+    	&.hover,
+        &:focus,
+    	&.focus {
+            color: @text-color-inverted--strongest;
+            background-color: @bg;
+        }
+        &:active,&.active {
+            color: @text-color-inverted--strongest;
+            background-color: darken(@bg,10%);
+        }
+    }
+}

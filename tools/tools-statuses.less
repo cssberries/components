@@ -1,0 +1,39 @@
+.status (@status, @color, @icon) {
+    @icon-status: "icon-@{status}";
+    @icon-color : "text-color--@{color}";
+    @icon-name  : "icon-@{icon}";
+
+    .status--@{status} {
+        .icon--status {
+            color: @@icon-color;
+
+            &:before {
+                font-family: @icon-font-base-name;
+                content    : @@icon-name;
+
+            }
+        }
+
+        .icon-color--status,
+        .text-color--status {
+            color: @@icon-color;
+        }
+
+        .bg--status {
+            background-color: @@icon-color;
+        }
+
+        .border--color-status {
+            border-color: @@icon-color;
+        }
+        .tabs--integrated {
+            .tabs__item {
+                &.open, &.active {
+                    &:after {
+                        background-color: @@icon-color;
+                    }
+                }
+            }
+        }
+    }
+}
