@@ -20,7 +20,7 @@ input {
     left: 8px;
     display: inline-block;
     position: absolute;
-    font-size: @text--md;
+    font-size: @font--md;
     color: #999999;
     z-index: 2;
 }
@@ -90,7 +90,7 @@ input[type=checkbox].checkbox + .checkbox-label {
     line-height: @checkbox-size;
     background-repeat: no-repeat;
     background-position: 0 0;
-    // font-size: @text--sm;
+    // font-size: @font--sm;
     // vertical-align: middle;
     cursor: pointer;
     color: @text-color--weak;
@@ -128,7 +128,7 @@ input[type=checkbox].checkbox:checked + .checkbox-label {
         }
     }
     .icon-check;
-    // font-size: @text--sm;
+    // font-size: @font--sm;
     line-height: @checkbox-size;
     &:before {
         text-align: center;
@@ -163,7 +163,7 @@ input[type=checkbox].checkbox.checkbox--sm:checked + .checkbox-label {
         }
     }
     .icon-check;
-    font-size: @text--xxs;
+    font-size: @font--xxs;
     line-height: 12px;
     &:before {
         text-align: center;
@@ -172,7 +172,7 @@ input[type=checkbox].checkbox.checkbox--sm:checked + .checkbox-label {
 }
 
 .checkbox--sm + .checkbox-label {
-    font-size: @text--xxs;
+    font-size: @font--xxs;
     line-height: 11px;
     .relative;
     &:before {
